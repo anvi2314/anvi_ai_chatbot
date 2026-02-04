@@ -1,0 +1,41 @@
+:root{
+  --bg1:#0f172a;
+  --bg2:#020617;
+  --card:#0b1220;
+  --accent:#7c3aed;
+  --accent-2:#06b6d4;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:36px;
+}
+.page{width:100%;max-width:960px}
+.header{display:flex;align-items:flex-start;gap:16px;margin-bottom:18px}
+.header h1{margin:0;font-size:28px}
+.subtitle{margin:0;color:rgba(230,238,248,0.7)}
+.chat-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.chat-window{height:60vh;overflow:auto;padding:18px;border-radius:10px;background:linear-gradient(180deg, rgba(12,18,30,0.4), rgba(8,12,20,0.2));display:flex;flex-direction:column;gap:12px}
+.chat-form{display:flex;margin-top:12px;gap:8px}
+.chat-form input{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none}
+.chat-form button{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:white;padding:10px 16px;border-radius:10px;cursor:pointer}
+.bubble{max-width:78%;padding:12px 14px;border-radius:14px;line-height:1.4}
+.bubble.user{align-self:flex-end;background:linear-gradient(90deg, rgba(124,58,237,0.15), rgba(6,182,212,0.12));border:1px solid rgba(124,58,237,0.25)}
+.bubble.bot{align-self:flex-start;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03)}
+.meta{font-size:12px;color:rgba(230,238,248,0.6);margin-bottom:6px}
+.typing{height:14px;width:36px;display:inline-block}
+.dot{width:6px;height:6px;background:var(--accent);border-radius:99px;display:inline-block;margin:0 3px;opacity:0;animation:blink 1s infinite}
+.dot:nth-child(1){animation-delay:0s}.dot:nth-child(2){animation-delay:0.15s}.dot:nth-child(3){animation-delay:0.3s}
+@keyframes blink{0%{opacity:0}25%{opacity:1}50%{opacity:0.3}100%{opacity:0}}
+.footer{color:rgba(230,238,248,0.45);font-size:13px;margin-top:10px}
+
+/* small screens */
+@media (max-width:520px){.chat-window{height:58vh}.header h1{font-size:22px}}

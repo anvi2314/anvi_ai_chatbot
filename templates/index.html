@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ollama Chat — AI Chatbot</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Ollama Chat</h1>
+        <p class="subtitle">A sleek Flask + Ollama chatbot</p>
+      </header>
+
+      <main class="chat-card">
+        <div id="chat" class="chat-window"></div>
+
+        <form id="chat-form" class="chat-form">
+          <input id="message-input" type="text" placeholder="Say something..." autocomplete="off" />
+          <button type="submit" id="send-btn">Send</button>
+        </form>
+      </main>
+
+      <footer class="footer">Set your OLLAMA_URL and MODEL env vars if needed.</footer>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+  </body>
+</html>
